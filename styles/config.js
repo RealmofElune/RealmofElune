@@ -56,7 +56,7 @@ let options = {
         itemOrder: "asc",
 
         filterColumn: 'Design Type',
-        searchFilterParams: ['ID', 'Owner', 'Designer', 'Artist'],
+        searchFilterParams: ['ID', 'Owner', 'Designer', 'Artist', 'Talent'],
         fauxFolderColumn: 'Species',
 
     },
@@ -69,7 +69,7 @@ let options = {
         sheetPage: sheetPages.items,
     
         itemAmount: 24,
-        itemOrder: "asc",
+        itemOrder: "desc",
     
         filterColumn: 'Rarity',
         searchFilterParams: ['Item'],
