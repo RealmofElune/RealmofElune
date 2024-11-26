@@ -115,7 +115,7 @@ let options = {
         sheetPage: sheetPages.traits,
 
         itemAmount: 24,
-        itemOrder: "asc",
+        itemOrder: "desc",
 
         filterColumn: 'Talent',
         searchFilterParams: ['Trait'],
