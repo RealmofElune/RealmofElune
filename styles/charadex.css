@@ -445,7 +445,7 @@ a.badge.badge-primary:active  {
 .badge:has(.jobtwo:empty) {
   display: none;
   }
-
+  
 
 /* ============================================================= */
 /* Input
