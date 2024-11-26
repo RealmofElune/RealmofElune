@@ -721,7 +721,9 @@ const frontPage = (options) => {
 
                 // Add cardlink
                 let cardKey = Object.keys(selectDesigns[0])[0];
-                for (var i in selectDesigns) { selectDesigns[i].cardlink = folderURL + "masterlist.html?" + cardKey + "=" + selectDesigns[i][cardKey]; }
+                // the latest character is a bug with the link i havnt gotten around to patching, on line 726 in the js file, try this
+                for (var i in selectDesigns) { selectDesigns[i].cardlink = folderURL + "/masterlist.html?" + cardKey + "=" + selectDesigns[i][cardKey]; }
+
 
                 // Nyoom
                 let galleryOptions = {
