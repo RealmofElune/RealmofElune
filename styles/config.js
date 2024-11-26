@@ -117,7 +117,7 @@ let options = {
         itemAmount: 24,
         itemOrder: "asc",
 
-        filterColumn: 'Rarity',
+        filterColumn: 'Talent',
         searchFilterParams: ['Trait'],
         fauxFolderColumn: 'Type',
     
