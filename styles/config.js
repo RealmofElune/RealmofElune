@@ -40,7 +40,7 @@ let options = {
         numOfStaff: 5,
 
         masterlistSheetPage: sheetPages.masterlist,
-        numOfDesigns: 4,
+        numOfDesigns: 1,
     
     },
 
