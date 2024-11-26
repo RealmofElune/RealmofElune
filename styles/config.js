@@ -37,7 +37,7 @@ let options = {
         numOfPrompts: 3,
 
         staffSheetPage: sheetPages.staff,
-        numOfStaff: 8,
+        numOfStaff: 5,
 
         masterlistSheetPage: sheetPages.masterlist,
         numOfDesigns: 4,
