@@ -87,7 +87,7 @@ let options = {
         logSheetPage: sheetPages.inventoryLog,
     
         itemAmount: 24,
-        sortTypes: ['Currency', 'MYO Slot', 'Pet', 'Trait', 'Misc'],
+        sortTypes: ['Currency', 'Trait Potion', 'Breeding', 'Mutation Item', 'Corruption Potion', 'Miscellaneous', 'Account Bound'],
         
         searchFilterParams: ['Username'],
     
