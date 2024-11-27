@@ -450,7 +450,7 @@ a.badge.badge-primary:active  {
   display: none;
   }
   
-.div:has(.coownerlink:empty) {
+.a:has(.coownerlink:empty) {
   display: none;
   }
   
