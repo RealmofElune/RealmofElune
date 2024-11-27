@@ -55,7 +55,7 @@ let options = {
         itemAmount: 12,
         itemOrder: "asc",
 
-        filterColumn: 'Design Type',
+        filterColumn: 'Talent',
         searchFilterParams: ['ID', 'Owner', 'Designer', 'Artist', 'Talent'],
         fauxFolderColumn: 'Species',
 
