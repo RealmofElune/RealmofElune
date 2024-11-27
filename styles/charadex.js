@@ -163,6 +163,7 @@ let sheetArrayKeys = (arr) => {
     if (itemArray.indexOf('ownerlink')) itemArray[itemArray.indexOf('ownerlink')] = { name: 'ownerlink', attr: 'href' };
     if (itemArray.indexOf('artistlink')) itemArray[itemArray.indexOf('artistlink')] = { name: 'artistlink', attr: 'href' };
     if (itemArray.indexOf('designerlink')) itemArray[itemArray.indexOf('designerlink')] = { name: 'designerlink', attr: 'href' };
+    if (itemArray.indexOf('coownerlink')) itemArray[itemArray.indexOf('coownerlink')] = { name: 'coownerlink', attr: 'href' };
     if (itemArray.indexOf('image')) itemArray[itemArray.indexOf('image')] = { name: 'image', attr: 'src' };
     return itemArray;
 };
