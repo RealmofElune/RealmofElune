@@ -446,14 +446,14 @@ a.badge.badge-primary:active  {
   display: none;
   }
   
-/* .a:has(.coowner:empty) {
+.coowner:has(.coowner:empty) {
   display: none;
   }
   
-.a:has(.coownerlink:empty) {
+.coowner2:has(.coowner2:empty) {
   display: none;
   }
-*/  
+  
 
 /* ============================================================= */
 /* Input
