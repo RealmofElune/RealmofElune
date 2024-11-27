@@ -446,11 +446,11 @@ a.badge.badge-primary:active  {
   display: none;
   }
   
-a:has(.coowner:empty) {
+.b:has(.coowner:empty) {
   display: none;
   }
   
-a:has(.coownerlink:empty) {
+.b:has(.coownerlink:empty) {
   display: none;
   }
   
