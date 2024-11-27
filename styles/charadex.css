@@ -446,7 +446,7 @@ a.badge.badge-primary:active  {
   display: none;
   }
   
-.div:has(.coowner:empty) {
+.a:has(.coowner:empty) {
   display: none;
   }
   
