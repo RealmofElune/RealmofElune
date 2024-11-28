@@ -453,6 +453,14 @@ a.badge.badge-primary:active  {
 .coownership2:has(.coowner2:empty) {
   display: none;
   }
+
+.talentinfo:has(.coowner2:empty) {
+  display: none;
+  }
+
+.talentinfo:has(.coowner2:empty) {
+  display: none;
+  }
   
 
 /* ============================================================= */
