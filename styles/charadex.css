@@ -454,11 +454,11 @@ a.badge.badge-primary:active  {
   display: none;
   }
 
-.talentinfo:has(.coowner2:empty) {
+.talentinfo:has(.talent:empty) {
   display: none;
   }
 
-.talentinfo:has(.coowner2:empty) {
+.notesinfo:has(.notes:empty) {
   display: none;
   }
   
