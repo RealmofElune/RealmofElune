@@ -462,6 +462,14 @@ a.badge.badge-primary:active  {
   display: none;
   }
   
+.parent1info:has(.parent1:empty) {
+  display: none;
+  }
+  
+.parent2info:has(.parent2:empty) {
+  display: none;
+  }
+  
 
 /* ============================================================= */
 /* Input
