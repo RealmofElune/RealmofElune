@@ -19,6 +19,7 @@ let sheetPages = {
     prompts: "prompts",
     faq: "faq",
     staff: "mods",
+    eggs: "eggs",
 
 }
 
@@ -121,6 +122,22 @@ let options = {
         searchFilterParams: ['Trait'],
         fauxFolderColumn: 'Type',
     
+    },
+
+
+    /* Eggs
+    /* --------------------------------------------------------------- */
+    eggs: {
+
+        sheetPage: sheetPages.eggs,
+
+        itemAmount: 24,
+        itemOrder: "desc",
+    
+        filterColumn: 'Rarity',
+        searchFilterParams: ['Owner'],
+        fauxFolderColumn: 'Type',
+
     },
 
 
