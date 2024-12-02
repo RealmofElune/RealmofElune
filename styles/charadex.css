@@ -21,7 +21,7 @@ body {
   /* ============================================================= */
   /* Secondary Color
   ================================================================ */
-  --cd-secondary-color:                  #5ab9c6;
+  --cd-secondary-color:                  #2b8e9b;
   --cd-secondary-text-color:             #fff;
 
   /* ============================================================= */
@@ -105,7 +105,7 @@ body {
   /* Link
   ================================================================ */
 
-  --cd-link-text-color:                  #31a4b4;
+  --cd-link-text-color:                  #0c5c66;
   --cd-link-text-color-hover:            var(--cd-secondary-color);
 
 
