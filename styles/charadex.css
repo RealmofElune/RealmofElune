@@ -675,7 +675,16 @@ p:last-child {
     }
 }
 
-.banner {
-	border-radius: var(--cd-border-radius);
+.banner-img {
+		border-radius: var(--cd-border-radius);
 }
+
+
+
+
+
+
+
+
+
 
