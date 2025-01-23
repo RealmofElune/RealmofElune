@@ -674,3 +674,8 @@ p:last-child {
         font-size: 5rem;
     }
 }
+
+.banner {
+	border-radius: var(--cd-border-radius);
+}
+
