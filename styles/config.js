@@ -57,7 +57,7 @@ let options = {
         itemOrder: "asc",
 
         filterColumn: 'Status',
-        searchFilterParams: ['ID', 'Owner', 'Co Owner', 'Co Owner 2', 'Designer', 'Artist', 'Talent', 'Design'],
+        searchFilterParams: ['ID', 'Owner', 'Co Owner', 'Co Owner 2', 'Designer', 'Artist', 'Talent', 'Design', 'Traits'],
         fauxFolderColumn: 'Species',
 
     },
