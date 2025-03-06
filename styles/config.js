@@ -157,7 +157,7 @@ let options = {
         sheetPage: sheetPages.faq,
     
         itemAmount: 24,
-        itemOrder: "asc",
+        itemOrder: "desc",
     
         searchFilterParams: ['Tags'],
     
