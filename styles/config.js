@@ -159,7 +159,7 @@ let options = {
         itemAmount: 24,
         itemOrder: "desc",
     
-        searchFilterParams: ['Tags'],
+        searchFilterParams: ['Tags', 'Question', 'Answer'],
     
     },
 
