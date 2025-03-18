@@ -57,7 +57,7 @@ let options = {
         itemOrder: "asc",
 
         filterColumn: 'Status',
-        searchFilterParams: ['ID', 'Owner', 'Co Owner', 'Co Owner 2', 'Designer', 'Artist', 'Talent', 'Design', 'Traits'],
+        searchFilterParams: ['Owner', 'Co Owner', 'Co Owner 2', 'Designer', 'Artist', 'Talent', 'Design', 'Traits'],
         fauxFolderColumn: 'Species',
 
     },
@@ -135,7 +135,7 @@ let options = {
         itemOrder: "desc",
     
         filterColumn: 'Rarity',
-        searchFilterParams: ['Owner'],
+        searchFilterParams: ['Owner', 'Egg Name'],
         fauxFolderColumn: 'Type',
 
     },
