@@ -28,7 +28,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Custom for Elune
         // Check for children and creates a list/gallery
-        let children = listData.array.filter(i => i.parent1 === profile.design);
+        let children = listData.array.filter(i =>
+          charadex.tools.scrub(i.parent1) === charadex.tools.scrub(profile.design) ||
+          charadex.tools.scrub(i.parent2) === charadex.tools.scrub(profile.design)
+        );
+
         if (charadex.tools.checkArray(children)) {
           let childrenList = await charadex.initialize.page(children, charadex.page.masterlist.children);
           $('#children-gallery').show();
@@ -40,8 +44,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (profile.parent1 || profile.parent2) {
 
           let parents = [
-            listData.array.find(i => i.design === profile.parent1),
-            listData.array.find(i => i.design === profile.parent2)
+            listData.array.find(i => charadex.tools.scrub(i.design) === charadex.tools.scrub(profile.parent1)),
+            listData.array.find(i => charadex.tools.scrub(i.design) === charadex.tools.scrub(profile.parent2))
           ];
 
           if (charadex.tools.checkArray(parents)) {
