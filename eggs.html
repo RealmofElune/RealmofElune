@@ -3,265 +3,285 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <!-- ----------------------------------------------------------------- -->
-    <!-- About Your Site                                                   -->
-    <!-- ----------------------------------------------------------------- -->
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
-    <title>Charadex</title>
-    <meta property="title" content="Realm of Elune" />
-    <meta property="type" content="website" />
-    <meta property="url" content="https://realmofelune.github.io/" />
-    <meta property="image" content="assets/meta.png" />
-    <meta name="The Realm of Elune is an ARPG (Art Role Playing Game), where creativity knows no bounds!">
+  <!-- ----------------------------------------------------------------- -->
+  <!-- About Your Site                                                   -->
+  <!-- ----------------------------------------------------------------- -->
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+  <title>Realm of Elune Eggs</title>
+  <meta name="title" content="Realm of Elune Eggs" />
+  <meta name="type" content="website" />
+  <meta name="url" content="https://realmofelune.github.io/" />
+  <meta name="image" content="assets/meta.png" />
+  <meta name="The Realm of Elune is an ARPG (Art Role Playing Game), where creativity knows no bounds!">
 
-    <!-- No AI scraping directives -->
-    <meta name="robots" content="noai">
-    <meta name="robots" content="noimageai">
-
-
-    <!-- ----------------------------------------------------------------- -->
-    <!-- Styles                                                            -->
-    <!-- ----------------------------------------------------------------- -->
-
-    <!-- Bootstrap CSS -->
-    <!-- Using Bootstrap 4.5 because its closest to Toyhou.se's current version -->
-    <!-- https://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- No AI scraping directives -->
+  <meta name="robots" content="noai">
+  <meta name="robots" content="noimageai">
 
 
-    <!-- ----------------------------------------------------------------- -->
-    <!-- Optional Styles                                                   -->
-    <!-- ----------------------------------------------------------------- -->
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Styles                                                            -->
+  <!-- ----------------------------------------------------------------- -->
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="styles/charadex.css">
+  <!-- Bootstrap CSS -->
+  <!-- Using Bootstrap 4.5 because its closest to Toyhou.se's current version -->
+  <!-- https://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Comfortaa:500" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+  <!-- ----------------------------------------------------------------- -->
+  <!-- Optional Styles                                                   -->
+  <!-- ----------------------------------------------------------------- -->
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="styles/css/charadex.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Comfortaa:500" rel="stylesheet">
 
 
 </head>
 
-<body>
+<body id="charadex-body">
 
 
-    <!-- --------------------------------------------------------------------
+  <!-- --------------------------------------------------------------------
     <-- Header
     <-------------------------------------------------------------------- -->
-    
-    <div class="load-html" id="header" data-source="includes/header.html"></div>
+  <div class="load-html" id="header" data-source="includes/header.html"></div>
 
 
-    <!-- Spinner for loading-->
-    <div class="spinner-border m-auto" id="loading"></div>
-
-
-    <!-- --------------------------------------------------------------------
+  <!-- --------------------------------------------------------------------
     <-- Masterlist
     <-------------------------------------------------------------------- -->
-    <div class="container softload masterlist-container" id="main-container">
+  <div class="container" id="main-container">
+    <div id="charadex-gallery">
+
+      <!-- Top Card Container
+      <!-- ----------------------------------------------------------------- -->
+      <div class="card p-md-5 p-4 mb-4">
+
+        <!-- Title
+        <!-- --------------------------------------------------------------- -->
+        <h3 class="mb-0"><a href="eggs.html">Egg Catalogue</a></h3>
+
+        <!-- Faux Folders
+        <!-- --------------------------------------------------------------- -->
+        <div style="display:none;" id="charadex-folder-container">
+          <hr>
+          <div class="row no-gutters m-n1" id="charadex-folders"></div>
+          <!-- Buttons -->
+          <div style="display:none;">
+            <div class="col-lg-3 col-md-4 col-sm-6 p-1" id="charadex-folder">
+              <a class="btn btn-primary d-block" href=""></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filters
+        <!-- --------------------------------------------------------------- -->
+        <div style="display:none;" id="charadex-filter-container">
+          <hr>
+          <div class="row no-gutters m-n1" id="charadex-filters"></div>
+          <!-- Filters -->
+          <div style="display: none;">
+            <div class="col-md-4 col-12 p-1" id="charadex-filter">
+              <label class="px-2"></label>
+              <select class="form-control"></select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search
+        <!-- --------------------------------------------------------------- -->
+        <div style="display:none;" id="charadex-search-container">
+          <hr>
+          <div class="row no-gutters m-n1">
+            <!-- Search Filter -->
+            <div class="col-md-4 col-6 p-1" style="display: none;">
+              <select class="form-control" id="charadex-search-filter"></select>
+            </div>
+            <!-- Search Bar -->
+            <div class="col d-flex p-1">
+              <input class="form-control search" type="search" placeholder="Search" id="charadex-search">
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination
+        <!-- --------------------------------------------------------------- -->
+        <div style="display: none;" class="charadex-pagination-container">
+          <hr class="mb-4 mt-4">
+          <div class="nav d-flex justify-content-center mb-n4">
+            <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
+            <ul class="pagination charadex-pagination charadex-pagination-top justify-content-center m-0"></ul>
+            <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
+          </div>
+        </div>
+
+        <!-- Prev & Next Topbar
+        <!-- --------------------------------------------------------------- -->
+        <div style="display: none;" id="charadex-prevnext-container">
+          <hr>
+          <div class="row no-gutters px-2 text-uppercase">
+            <div class="col-6 px-1">
+              <a id="entryPrev" href=""><i class="fas fa-chevron-left mr-2"></i><b><span></span></b></a>
+            </div>
+            <div class="col-6 px-1 text-right order-md-1">
+              <a id="entryNext" href=""><b><span></span></b><i class="fas fa-chevron-right ml-2"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Repeated Items Render Here
+      <!-- --------------------------------------------------------------- -->
+      <div class="row no-gutters charadex-list softload m-n2"></div>
+
+      <!-- Pagination
+      <!-- --------------------------------------------------------------- -->
+      <div style="display: none;" class="charadex-pagination-container">
+        <div class="card px-3 py-1 mt-4">
+          <div class="nav d-flex justify-content-center">
+            <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
+            <ul class="pagination charadex-pagination charadex-pagination-bottom justify-content-center m-0"></ul>
+            <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- --------------------------------------------------------------------
+  <-- Footer
+  <-------------------------------------------------------------------- -->
+  <div class="load-html" id="footer" data-source="includes/footer.html"></div>
+
+  <!-- --------------------------------------------------------------------
+  <-- Repeat Items
+  <-- Do not remove 'display:none;'
+  <-- Edit these to your liking
+  <-------------------------------------------------------------------- -->
+  <div style="display:none;">
 
 
-        <!-- Gallery Container
-        ------------------------------------------------------------------- -->
-        <div id="charadex-gallery">
+    <!-- Gallery Items
+    <!-- --------------------------------------------------------------- -->
+    <div class="col-lg-3 col-sm-6 p-2" id="charadex-gallery-item">
+      <div class="card h-100">
+
+        <!-- Id -->
+        <div class="card-header text-center">
+          <h5 class="mb-0">
+            <a class="profileid profilelink" href=""></a>
+          </h5>
+        </div>
+
+        <!-- Image -->
+        <div class="card-body cd-gallery-card d-flex flex-fill">
+          <img class="image img-fluid m-auto" src="" >
+        </div>
+
+        
+        <!-- Owner -->
+        <div class="card-footer text-center">
+          <a class="owner ownerlink small" href=""></a>
+        </div>
 
 
-            <!-- Filters
-            ----------------------------------------------------------------- -->
-            <div class="card p-md-5 p-4 mb-4">
+      </div>
+    </div>
 
-                <h3 class="mb-0"><a href="eggs.html">Egg Catalogue</a></h3>
 
-                <!-- Faux Folders
-                <-- Remove this if you'd like to make your own buttons instead!
-                ------------------------------------------------------------------- -->
-                <div style="display:none;" id="filter-buttons">
-                    <hr class="mb-3">
-                    <div class="row no-gutters mx-n1"></div>
-                </div>
+    <!-- Singular Item
+    <!-- --------------------------------------------------------------- -->
+    <div class="col-12 p-2" id="charadex-profile">
+      <div class="card">
 
-                <!-- Filters -->
-                <div style="display:none;" id="charadex-filters">
-                    <hr class="w-100 mb-4">
-                    <div class="row no-gutters m-n1">
+        <!-- Header -->
+        <div class="card-header px-md-5 px-4 py-4">
+          <div class="row no-gutters align-items-end m-n1">
+            <div class="col"><h3 class="mb-0 pr-2"><a class="profilelink profileid"></a></h3></div>
+            <div class="col-auto text-right raritybadge"></div>
+          </div>
+        </div>
 
-                        <!-- Custom Filter -->
-                        <div class="col-md-3 col-12 p-1" style="display: none;">
-                            <select class="form-control bg-faded" id="filter"></select>
-                        </div>
+        <!-- Main Info
+        <!-- ----------------------------------------------------------- -->
+        <div class="p-md-5 p-4">
+          <div class="row no-gutters m-n2">
 
-                        <!-- Search Filter -->
-                        <div class="col-md-3 col-3 p-1" style="display: none;">
-                            <select class="form-control bg-faded" id="search-filter"></select>
-                        </div>
-
-                        <!-- Search Bar -->
-                        <div class="col-md col-9 p-1">
-                            <input class="form-control bg-faded search" type="search" placeholder="Search" id="search">
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Pagination -->
-                <div style="display: none;" id="charadex-pagination">
-                    <hr class="mb-4 mt-4">
-                    <div class="nav d-flex justify-content-center mb-n4">
-                        <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
-                        <ul class="pagination pagination-top justify-content-center m-0"></ul>
-                        <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
-                    </div>
-                </div>
-
+            <!-- Image -->
+            <div class="col-md-4 d-flex justify-content-center align-items-start text-center p-2">
+              <img class="image img-fluid" src="">
             </div>
 
+            <div class="col-md-8 p-2">
+              <div class="card bg-faded p-4 h-100">
 
-            <!-- Repeated Items Render Here
-            ----------------------------------------------------------------- -->
-            <ul class="row no-gutters list list-unstyled m-n2"></ul>
+                <!-- Item -->
+                <div class="d-flex no-gutters mb-2">
+                  <b class="text-muted col-md-5 col-6">Owner</b>
+                  <a class="owner ownerlink"></a>
+                </div>
+  
+                <!-- Item -->
+                <div class="d-flex no-gutters mb-2">
+                  <b class="text-muted col-md-5 col-6">Talent</b>
+                  <span class="talent"></span>
+                </div>
+  
+                <!-- Item -->
+                <div class="d-flex no-gutters mb-2">
+                  <b class="text-muted col-md-5 col-6">Parents</b>
+                  <div class="d-flex flex-column">
+                    <a class="parent1 parent1link"></a>
+                    <a class="parent2 parent2link"></a>
+                  </div>
+                </div>
 
-            <!-- Bottom Pagination
-            ----------------------------------------------------------------- -->
-            <div class="card px-3 py-1 mt-4">
-              <div class="nav d-flex justify-content-center">
-                <div class="btn-prev page-item"><a class="page-link"><i class="fa fa-chevron-left"></i></a></div>
-                <ul class="pagination pagination-bottom justify-content-center m-0"></ul>
-                <div class="btn-next page-item"><a class="page-link"><i class="fa fa-chevron-right"></i></a></div>
+                <hr>
+                
+                <!-- Item -->
+                <div>
+                  <b class="text-muted">Traits</b>
+                  <div class="px-4 cd-text-pre traits"></div>
+                </div>
+
               </div>
             </div>
 
-        </div>
+          </div>
 
+        </div>
+      </div>
     </div>
 
 
-    <!-- --------------------------------------------------------------------
-    <-- Footer
-    <-------------------------------------------------------------------- -->
-    
-    <div class="load-html" id="footer" data-source="includes/footer.html"></div>
+  </div>
 
+  <!-- ----------------------------------------------------------------- -->
+  <!-- JS                                                                -->
+  <!-- ----------------------------------------------------------------- -->
 
-    <!-- --------------------------------------------------------------------
-    <-- Repeat Items
-    <-- Do not remove 'display:none;'
-    <-- Edit these to your liking
-    <-------------------------------------------------------------------- -->
-    <div style="display:none;">
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-        <!-- Faux Folder Buttons
-        ------------------------------------------------------------------- -->
-        <div class="col-lg-3 col-md-4 col-sm-6 p-1" id="charadex-filter-buttons">
-            <a class="btn btn-primary d-block" href=""></a>
-        </div>
-
-
-        <!-- Gallery Items
-        ------------------------------------------------------------------- -->
-        <li class="col-lg-3 col-sm-6 p-2" id="charadex-entries">
-            <a class="card h-100 cardlink" href="">
-                <h5 class="card-header text-center eggname"></h5>
-                <div class="card-body d-flex flex-fill">
-                    <img class="image img-fluid m-auto" src="" oncontextmenu="return false">
-                </div>
-            </a>
-        </li>
-
-
-        <!-- Singular Item
-        ------------------------------------------------------------------- -->
-        <li class="col-12 p-2" id="charadex-card">
-
-            <!-- Actual Card -->
-            <div class="card">
-
-                <!-- Header -->
-                <h2 class="card-header text-center p-4 eggname"></h2>
-
-                <!--Main Info -->
-                <div class="row no-gutters p-md-5 p-4">
-
-
-                    <!-- Image -->
-                    <div class="col-md-4 p-3">
-                        <div class="mx-auto w-100 text-center" oncontextmenu="return false">
-                            <img class="image img-fluid" src="">
-                        </div>
-                    </div>
-
-
-                    <!-- Information List -->
-                    <div class="col-md-8 p-3">
-
-                        
-                        <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted">Owner</b>
-                                <a class="ownerlink" href="" target="_blank"><span class="owner"></span></a>
-                            </div>
-
-                        <!-- Item -->
-                        <div class="d-flex justify-content-between mb-2">
-                            <b class="text-muted">Talent</b>
-                            <span class="talent"></span>
-                        </div>
-
-                        <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted">Parent One</b>
-                                <a class="parent1link" href="" target="_blank"><span class="parent1"></span></a>
-                            </div>
-                        
-                        <!-- Item -->
-                            <div class="d-flex justify-content-between mb-2">
-                                <b class="text-muted">Parent Two</b>
-                                <a class="parent2link" href="" target="_blank"><span class="parent2"></span></a>
-                            </div>
-
-                        <hr>
-
-                        <!-- Item -->
-                            <div class="">
-                                <b class="text-muted">Traits</b>
-                                <div class="pl-3 text-pre traits"></div>
-                            </div>
-
-                        <!-- Add more list items above this line-->
-                    </div>
-                </div>
-            </div>
-        </li>
-
-
-    </div>
-
-
-    <!-- ----------------------------------------------------------------- -->
-    <!-- JS                                                                -->
-    <!-- ----------------------------------------------------------------- -->
-
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
-    <!-- List.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.0/list.min.js" crossorigin="anonymous"></script>
-
-    <!-- Charadex Script -->
-    <script src="styles/config.js"></script>
-    <script src="styles/charadex.js"></script>
-    <script>charadexLarge(options.eggs);</script>
+  <!-- Charadex Script -->
+  <script src="styles/js/pages/base.js" type="module"></script>
+  <script src="styles/js/pages/eggs.js" type="module"></script>
 
 
 </body>

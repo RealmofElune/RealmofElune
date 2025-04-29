@@ -306,6 +306,54 @@ charadex.page.faq = {
 }
 
 
+/* Eggs Catalogue
+/* --------------------------------------------------------------- */
+charadex.page.eggs = {
+
+  sheetPage: charadex.sheet.pages.eggs,
+  sitePage: 'eggs',
+  dexSelector: 'charadex',
+  profileProperty: 'eggname',
+
+  sort: {
+    toggle: true,
+    key: "id",
+    order: "desc",
+    parameters: []
+  },
+
+  pagination: {
+    toggle: true,
+    bottomToggle: true,
+    amount: 24,
+  },
+
+  filters: {
+    toggle: true,
+    parameters: {
+      'Talent': charadex.sheet.options.talent,
+    }
+  },
+
+  fauxFolder: {
+    toggle: false,
+    folderProperty: '',
+    parameters: [],
+  },
+
+  search: {
+    toggle: true,
+    filterToggle: true,
+    parameters: ['All', 'Egg Name', 'Owner', 'Talent', 'Traits']
+  },
+
+  prevNext: {
+    toggle: true,
+  },
+
+};
+
+
 /* Masterlist
 /* --------------------------------------------------------------- */
 charadex.page.masterlist = {
