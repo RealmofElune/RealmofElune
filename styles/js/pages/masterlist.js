@@ -12,15 +12,24 @@ document.addEventListener("DOMContentLoaded", async () => {
   let dex = await charadex.initialize.page(
     null,
     charadex.page.masterlist,
-    null, 
-    async (listData) => {
+    (arr) => {
+
+      // Custom for Elune
+      for (let entry of arr) {
+        if (!entry.owner) entry.owner = "Unsold Adopt";
+      }
+
+    }, async (listData) => {
 
       if (listData.type == 'profile') {
 
+        // Custom for Elune
+        //listData.array.find(i => )
+
         // Create the log dex
-        if (charadex.tools.checkArray(listData.array[0].masterlistlog)) {
+        if (charadex.tools.checkArray(listData.profileArray[0].masterlistlog)) {
           let logs = await charadex.initialize.page(
-            listData.array[0].masterlistlog,
+            listData.profileArray[0].masterlistlog,
             charadex.page.masterlist.relatedData['masterlist log'],
             null, 
             null,

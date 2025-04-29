@@ -15,9 +15,9 @@ let charadex = {};
 /* Any preview links will still show Charadex's information
 /* ==================================================================== */
 charadex.site = {
-  title: "Charadex",
-  url: "https://charadex-team.github.io/charadex-v1.0/",
-  description: `A tool for organizing small ARPGs and species.`
+  title: "Realm of Elune",
+  url: "https://realmofelune.github.io/",
+  description: `The Realm of Elune is an ARPG (Art Role Playing Game), where creativity knows no bounds!`
 }
 
 /* ==================================================================== */
@@ -26,11 +26,12 @@ charadex.site = {
 /* ==================================================================== */
 charadex.sheet = {
 
-  id: "1GwgfLizD3HQCieGia6di-TfU4E3EipT9Jb0BDZQwNak",
+  id: "1MhAv9KfLfJu0aoxnJxQ4Qo6GkXaRemkGIxChcdS6Me0",
 
   pages: {
     masterlist:    "masterlist",
     masterlistLog: "masterlist log",
+    eggs:          "eggs",
     inventory:     "inventory",
     inventoryLog:  "inventory log",
     items:         "items",
@@ -42,12 +43,15 @@ charadex.sheet = {
 
   options: {
 
-    designTypes: ['All', 'Official Design', 'Guest Design', 'MYO Slot', 'MYO Design'],
-    statuses: ['All', 'Resell', 'Trade', 'Gift', 'Voided', 'For Sale', 'Purchased'],
-    rarity: ['All', 'Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary'],
-    species: ['All', 'Dog', 'Cat', 'Bunny'],
-    itemTypes: ['All', 'Currency', 'MYO Slot', 'Pet', 'Trait', 'Misc'],
-    traitTypes: ['All', 'Ears', 'Eyes', 'Body', 'Limbs', 'Tails', 'Misc', 'Mutations']
+    designTypes: ['All', 'Official Design', 'Guest Design', 'MYO Design', 'Egg Design'],
+    statuses: ['All', 'Can Resell', 'Can Trade', 'Unsold Adopt', 'Voided', 'NPC', 'Staff Mascot'],
+    rarity: ['All', 'Common', 'Uncommon', 'Rare', 'Legendary'],
+    species: ['All', 'Kulpera', 'Fenera', 'Faeling', 'Drakotaur', 'Espyre'],
+    itemTypes: ['All', 'Currency', 'MYO Ticket', 'Trait Potion', 'Breeding', 'Mutation Item', 'Corruption Potion', 'Account Bound', 'Miscellaneous'],
+    traitTypes: ['All', 'Body Trait', 'Placement Trait', 'Head Trait', 'Mutation', 'Corruption', 'Info / Lore', 'Anatomy'],
+    talent: ['All', 'Garden Dweller', 'Animal Whisperer', 'Crystal Keeper', 'Aqua Searcher', 'Volcano Explorer', 'Hyperborean', 'Alchemist', 'Dragon Tamer', 'Kulptober', 'Forest Protector', 'Star Seeker', 'Exiled', 'Hybrid', 'N/A', 'Wiragon', 'Aquarian', 'Rapterian', 'Kulian', 'Universal'],
+    talentsForTraits: ['All', 'Garden Dweller', 'Animal Whisperer', 'Crystal Keeper', 'Aqua Searcher', 'Volcano Explorer', 'Hyperborean', 'Alchemist', 'Dragon Tamer', 'Kulptober', 'Forest Protector', 'Star Seeker', 'Exiled', 'Faeling', 'Fenera', 'Drakotaur', 'Espyre', 'Event'],
+    eggTalent: ['All', 'Garden Dweller', 'Animal Whisperer', 'Crystal Keeper', 'Aqua Searcher', 'Volcano Explorer', 'Hyperborean', 'Alchemist', 'Dragon Tamer', 'Kulptober', 'Forest Protector', 'Star Seeker', 'Hybrid'],
 
   }
 
@@ -302,7 +306,6 @@ charadex.page.faq = {
 }
 
 
-
 /* Masterlist
 /* --------------------------------------------------------------- */
 charadex.page.masterlist = {
@@ -336,8 +339,8 @@ charadex.page.masterlist = {
 
   fauxFolder: {
     toggle: true,
-    folderProperty: 'Species',
-    parameters: charadex.sheet.options.species,
+    folderProperty: 'species',
+    parameters: [... charadex.sheet.options.species],
   },
 
   search: {
