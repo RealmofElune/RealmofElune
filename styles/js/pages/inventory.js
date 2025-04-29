@@ -28,10 +28,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         )
 
         // designs
-        if (charadex.tools.checkArray(profile.masterlist)) {
+        let masterlist = await charadex.importSheet(charadex.sheet.pages.masterlist);
+        let ownedDesigns = masterlist.filter(design => 
+          [
+            charadex.tools.scrub(design.owner),
+            charadex.tools.scrub(design.coowner),
+            charadex.tools.scrub(design.coowner2)
+          ].includes(charadex.tools.scrub(profile.username))
+        )
+
+        if (charadex.tools.checkArray(ownedDesigns)) {
           let designs = await charadex.initialize.page(
-            profile.masterlist,
-            charadex.page.inventory.relatedData['masterlist'],
+            ownedDesigns,
+            charadex.page.inventory.masterlistConfig,
           );
         }
 
