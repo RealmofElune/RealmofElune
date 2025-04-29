@@ -692,11 +692,13 @@ p:last-child {
 .cd-hero-title {
   color: var(--cd-primary-color);
   background-color: var(--cd-faded-background-color);
+  background-size: cover;
+  background-position: center;
   border-radius: var(--cd-border-radius);
   font-family: var(--cd-header-font-family);
   display: flex;
   padding: 1.5rem;
-  min-height: 250px;
+  padding-top: 40%;
   font-weight: 800;
   font-size: 2.5rem;
 }

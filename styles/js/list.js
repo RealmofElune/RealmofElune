@@ -194,7 +194,6 @@ charadex.listFeatures.fauxFolders = (pageUrl, folderParameters, selector = 'char
   // Get the elements
   const folderElement = $(`#${selector}-folders`);
 
-  console.log(folderParameters)
   // Loop through parameters and add them to the folder element
   for (let key of folderParameters) {
     const buttonElement = $(`#${selector}-folder`).clone();
