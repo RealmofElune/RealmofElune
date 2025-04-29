@@ -468,6 +468,7 @@ charadex.page.inventory = {
   sitePage: 'inventories',
   dexSelector: 'charadex',
   profileProperty: 'username',
+  profileLink: 'link'
 
   // Dex Options
   sort: {
@@ -583,7 +584,7 @@ charadex.page.index = {
   prompts: {
     ... charadex.page.prompts,
     dexSelector: 'prompt',
-    amount: 2,
+    amount: 3,
   },
 
   staff: {
