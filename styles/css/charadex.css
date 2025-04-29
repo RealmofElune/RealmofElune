@@ -661,18 +661,18 @@ p:last-child {
   min-height: calc(175px + 2.5rem);
 }
 
-.cd-gallery-card > img {
+.cd-gallery-card img {
   max-height: 175px !important;
 }
 
-.cd-profile-image-container > img{
+.cd-profile-image-container img{
   max-height: 400px;
 }
 
 /* Traits */
 .cd-traits-scroll {
   max-height: 200px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 /* Prompts */
