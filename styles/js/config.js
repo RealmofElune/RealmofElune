@@ -16,7 +16,7 @@ let charadex = {};
 /* ==================================================================== */
 charadex.site = {
   title: "Realm of Elune",
-  url: "https://cheeriko.github.io/RealmofElune/",
+  url: "https://realmofelune.github.io/RealmofElune/",
   description: `The Realm of Elune is an ARPG (Art Role Playing Game), where creativity knows no bounds!`
 }
 
