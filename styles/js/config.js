@@ -435,7 +435,7 @@ charadex.page.masterlist = {
         amount: 12,
       },
 
-    }
+    },
 
   },
 
@@ -524,22 +524,19 @@ charadex.page.inventory = {
       },
 
     },
-    
 
-    [charadex.sheet.pages.masterlist]: {
+  },
 
-      // This imports the config from the masterlist
-      // So you dont have to repeat yourself
-      ...charadex.page.masterlist, 
+  masterlistConfig: {
 
-      sheetPage: charadex.sheet.pages.masterlist,
-      sitePage: 'masterlist',
-      primaryProperty: 'username',
-      relatedProperty: 'owner',
-      dexSelector: 'designs',
-      profileProperty: 'design',
+    // This imports the config from the masterlist
+    // So you dont have to repeat yourself
+    ...charadex.page.masterlist, 
 
-    }
+    sheetPage: charadex.sheet.pages.masterlist,
+    sitePage: 'masterlist',
+    dexSelector: 'designs',
+    profileProperty: 'design',
 
   },
 
