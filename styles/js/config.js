@@ -583,13 +583,13 @@ charadex.page.index = {
   prompts: {
     ... charadex.page.prompts,
     dexSelector: 'prompt',
-    amount: 3,
+    amount: 2,
   },
 
   staff: {
     ... charadex.page.staff,
     dexSelector: 'staff',
-    amount: 9,
+    amount: 6,
   },
 
   designs: {
