@@ -161,10 +161,10 @@ let sheetArrayKeys = (sheetArray) => {
   let newArr = [];
   for (let i in classArr) {
     newArr[i] = classArr[i];
-    if (classArr[i].includes('image') || classArr[i].includes('avatar') || classArr[i].includes('imageurl')) {
+    if (classArr[i].includes('image') || classArr[i].includes('avatar')) {
       newArr[i] = { name: classArr[i], attr: 'src' };
     }
-    if (classArr[i].includes('link') || classArr[i].includes('toyhouse')) {
+    if (classArr[i].includes('link') || classArr[i].includes('toyhouse') || classArr[i].includes('imageurl')) {
       newArr[i] = { name: classArr[i], attr: 'href' };
     }
   }
