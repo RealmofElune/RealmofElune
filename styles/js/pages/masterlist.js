@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     (arr) => {
 
       // Custom for Elune
+      // Removes empty owner info
       for (let entry of arr) {
         if (!entry.owner) entry.owner = "Unsold Adopt";
       }
@@ -23,18 +24,39 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       if (listData.type == 'profile') {
 
+        let profile = listData.profileArray[0];
+
         // Custom for Elune
-        //listData.array.find(i => )
+        // Check for children and creates a list/gallery
+        let children = listData.array.filter(i => i.parent1 === profile.design);
+        if (charadex.tools.checkArray(children)) {
+          let childrenList = await charadex.initialize.page(children, charadex.page.masterlist.children);
+          $('#children-gallery').show();
+          $('#genealogy-tab').parents('.nav-item').show();
+        }
+
+        // Custom for Elune
+        // Check for parents and creates a list/gallery
+        if (profile.parent1 || profile.parent2) {
+
+          let parents = [
+            listData.array.find(i => i.design === profile.parent1),
+            listData.array.find(i => i.design === profile.parent2)
+          ];
+
+          if (charadex.tools.checkArray(parents)) {
+            let parentList = await charadex.initialize.page(parents, charadex.page.masterlist.parents);
+            $('#parent-gallery').show();
+            $('#genealogy-tab').parents('.nav-item').show();
+          }
+
+        }
 
         // Create the log dex
-        if (charadex.tools.checkArray(listData.profileArray[0].masterlistlog)) {
+        if (charadex.tools.checkArray(profile.masterlistlog)) {
           let logs = await charadex.initialize.page(
-            listData.profileArray[0].masterlistlog,
-            charadex.page.masterlist.relatedData['masterlist log'],
-            null, 
-            null,
-            null,
-            'log'
+            profile.masterlistlog,
+            charadex.page.masterlist.relatedData['masterlist log']
           );
         }
 

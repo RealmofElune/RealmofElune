@@ -378,6 +378,22 @@ charadex.page.masterlist = {
 
     }
 
+  },
+
+  // Custom for elune
+  parents: {
+    sheetPage: charadex.sheet.pages.masterlist,
+    sitePage: 'masterlist',
+    dexSelector: 'parent',
+    profileProperty: 'design',
+  },
+
+  // Custom for elune
+  children: {
+    sheetPage: charadex.sheet.pages.masterlist,
+    sitePage: 'masterlist',
+    dexSelector: 'children',
+    profileProperty: 'design',
   }
 
 };

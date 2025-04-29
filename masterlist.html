@@ -79,7 +79,7 @@
           <div class="row no-gutters m-n1" id="charadex-folders"></div>
           <!-- Buttons -->
           <div style="display:none;">
-            <div class="col-lg-3 col-md-4 col-sm-6 p-1" id="charadex-folder">
+            <div class="col-md-4 col-sm-6 p-1" id="charadex-folder">
               <a class="btn btn-primary d-block" href=""></a>
             </div>
           </div>
@@ -218,6 +218,10 @@
             <a class="w-100 btn btn-primary active" id="profile-tab" data-toggle="tab" href="#profile" 
             aria-controls="profile" aria-selected="true">Profile</a>
           </li>
+          <li class="col p-1 nav-item" role="presentation" style="display: none;">
+            <a class="w-100 btn btn-primary" id="genealogy-tab" data-toggle="tab" href="#genealogy" aria-controls="genealogy" 
+            aria-selected="false">Genealogy</a>
+          </li>
           <li class="col p-1 nav-item" role="presentation">
             <a class="w-100 btn btn-primary" id="logs-tab" data-toggle="tab" href="#logs" aria-controls="logs" 
             aria-selected="false">Logs</a>
@@ -233,6 +237,7 @@
           <div class="tab-content">
 
             <div class="tab-pane fade active show" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+              <h4 class="text-primary mb-2">Profile</h4>
               <div class="row no-gutters m-n2">
 
                 <div class="col-md-6 p-2">
@@ -260,6 +265,14 @@
 
                     <!-- Item -->
                     <div>
+                      <b class="text-muted">Talent</b>
+                      <div class="px-4 talent"></div>
+                    </div>
+                    
+                    <hr>
+
+                    <!-- Item -->
+                    <div>
                       <b class="text-muted">Traits</b>
                       <div class="px-4 cd-text-pre traits cd-traits-scroll"></div>
                     </div>
@@ -272,8 +285,12 @@
 
                     <!-- Item -->
                     <div class="d-flex no-gutters mb-2">
-                      <b class="text-muted col-md-5 col-6">Owner</b>
-                      <a class="owner ownerlink"></a>
+                      <b class="text-muted col-md-5 col-6">Owner(s)</b>
+                      <div class="d-flex flex-column">
+                        <a class="owner ownerlink"></a>
+                        <a class="coowner coownerlink"></a>
+                        <a class="coowner2 coowner2link"></a>
+                      </div>
                     </div>
       
                     <!-- Item -->
@@ -316,9 +333,59 @@
               </div>
             </div>
             
+
+            <div class="tab-pane fade" id="genealogy" role="tabpanel" aria-labelledby="genealogy-tab" tabindex="0">
+
+              <div id="parent-gallery" style="display: none;" class="mb-4">
+                <h4 class="text-primary mb-2">Parents</h4>
+                <div class="row no-gutters m-n2 parent-list"></div>
+              </div>
+
+              <div style="display: none;">
+                <div class="col-md-6 p-2" id="parent-gallery-item">
+                  <div class="card bg-faded h-100">
+                    <div class="card-header bg-faded text-center">
+                      <h5 class="mb-0">
+                        <a class="profileid profilelink" href=""></a>
+                      </h5>
+                    </div>
+                    <div class="card-body bg-faded cd-gallery-card d-flex flex-fill">
+                      <img class="image img-fluid m-auto" src="" >
+                    </div>
+                    <div class="card-footer bg-faded text-center">
+                      <a class="owner ownerlink small" href=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="children-gallery" style="display: none;">
+                <h4 class="text-primary mb-2">Children</h4>
+                <div class="row no-gutters m-n2 children-list"></div>
+              </div>
+
+              <div style="display: none;">
+                <div class="col-md-4 p-2" id="children-gallery-item">
+                  <div class="card bg-faded h-100">
+                    <div class="card-header bg-faded text-center">
+                      <h5 class="mb-0">
+                        <a class="profileid profilelink" href=""></a>
+                      </h5>
+                    </div>
+                    <div class="card-body bg-faded cd-gallery-card d-flex flex-fill">
+                      <img class="image img-fluid m-auto" src="" >
+                    </div>
+                    <div class="card-footer bg-faded text-center">
+                      <a class="owner ownerlink small" href=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
             
             <div class="tab-pane fade" id="logs" role="tabpanel" aria-labelledby="logs-tab" tabindex="0">
-              <h4 class="text-primary">Transaction Log</h4>
+              <h4 class="text-primary">Logs</h4>
               <div class="card bg-faded p-4" id="log-gallery">
 
                 <!-- List -->
