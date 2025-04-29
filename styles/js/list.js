@@ -39,7 +39,6 @@ charadex.buildList = (selector = 'charadex') => {
   ===================================================================== */
   const getProfile = (galleryArray) => {
 
-
     // Check the parameters
     let pageParameter = charadex.url.getUrlParameters().get('profile');
     if (!pageParameter) return false;

@@ -107,7 +107,7 @@ charadex.page.items = {
   },
 
   prevNext: {
-    toggle: true,
+    toggle: false,
   },
 
 };
@@ -140,6 +140,7 @@ charadex.page.traits = {
     parameters: {
       'Type': charadex.sheet.options.traitTypes,
       'Rarity': charadex.sheet.options.rarity,
+      'Talent': charadex.sheet.options.talentsForTraits,
     }
   },
 
@@ -152,12 +153,21 @@ charadex.page.traits = {
   search: {
     toggle: true,
     filterToggle: true,
-    parameters: ['All', 'Trait', 'Rarity']
+    parameters: ['All', 'Trait', 'Rarity', 'Talent']
   },
 
   prevNext: {
-    toggle: true,
+    toggle: false,
   },
+
+  // Custom for Elune
+  similarTraits: {
+    sheetPage: charadex.sheet.pages.traits,
+    sitePage: 'traits',
+    dexSelector: 'similar',
+    profileProperty: 'trait',
+    profileToggle: false,
+  }
 
 };
 
@@ -434,6 +444,7 @@ charadex.page.masterlist = {
     sitePage: 'masterlist',
     dexSelector: 'parent',
     profileProperty: 'design',
+    profileToggle: false,
   },
 
   // Custom for elune
@@ -442,6 +453,7 @@ charadex.page.masterlist = {
     sitePage: 'masterlist',
     dexSelector: 'children',
     profileProperty: 'design',
+    profileToggle: false,
   }
 
 };

@@ -173,30 +173,21 @@
   <-------------------------------------------------------------------- -->
   <div style="display:none;">
 
-
     <!-- Gallery Items
     <!-- --------------------------------------------------------------- -->
-    <div class="col-md-6 p-2" id="charadex-gallery-item">
+    <div class="col-md-4 col-sm-6 p-2" id="charadex-gallery-item">
       <div class="card h-100">
-
-        <!-- Header -->
-        <div class="card-header p-4">
-          <div class="row no-gutters align-items-end m-n1">
-            <div class="col"><h5 class="mb-0 pr-2"><a class="profilelink profileid"></a></h5></div>
-            <div class="col-auto text-right raritybadge"></div>
-          </div>
+        <div class="card-header text-center">
+          <h6 class="mb-0">
+            <a class="profileid profilelink" href=""></a>
+          </h6>
         </div>
-        
-        <!-- Body -->
-        <div class="card-body p-md-4 p-3 d-flex flex-fill align-items-center">
-          <div class="row no-gutters m-n2">
-            <div class="col-md-4 p-2"><img class="image img-fluid m-auto" src="" ></div>
-            <div class="col-md-8 p-2">
-              <div class="description"></div>
-            </div>
-          </div>
+        <div class="card-body cd-gallery-card d-flex flex-fill">
+          <img class="image img-fluid m-auto" src="" >
         </div>
-
+        <div class="card-footer text-center small">
+          <span class="talent"></span>
+        </div>
       </div>
     </div>
 
@@ -207,61 +198,75 @@
       <div class="card">
 
         <!-- Header -->
-        <div class="card-header px-md-5 px-4 py-4">
-          <div class="row no-gutters align-items-end m-n1">
-            <div class="col"><h3 class="mb-0 pr-2"><a class="profilelink profileid"></a></h3></div>
-            <div class="col-auto text-right raritybadge"></div>
-          </div>
+        <div class="card-header p-4 text-center">
+          <h3 class="mb-0 pr-2"><a class="profilelink profileid"></a></h3> 
         </div>
+
+        <!-- Image -->
+        <div class="cd-profile-image-container p-md-5 p-4 text-center" >
+          <a class="traitlink" target="__blank" href="">
+            <img class="image img-fluid rounded" src="">
+          </a>
+        </div>
+        <hr class="my-0">
+
 
         <!-- Main Info
         <!-- ----------------------------------------------------------- -->
         <div class="p-md-5 p-4">
-          <div class="row no-gutters m-n2">
 
-            <!-- Image -->
-            <div class="col-md-4 d-flex justify-content-center align-items-start text-center p-2">
-              <img class="image img-fluid" src="">
-            </div>
+          <h4 class="text-primary mb-2">Trait Information</h4>
+          <div class="card bg-faded p-4 h-100">
+            <div class="row no-gutters m-n3">
 
-            <div class="col-md-8 p-2">
-              <div class="card bg-faded p-4 h-100">
+              <div class="col-md-6 p-3">
 
                 <!-- Item -->
-                <div class="d-flex no-gutters mb-2">
-                  <b class="text-muted col-md-5 col-6">Trait</b>
-                  <span class="trait"></span>
-                </div>
-  
-                <!-- Item -->
-                <div class="d-flex no-gutters mb-2">
-                  <b class="text-muted col-md-5 col-6">Type</b>
+                <div class="d-flex justify-content-between mb-2">
+                  <b class="text-muted">Type</b>
                   <span class="type"></span>
                 </div>
   
                 <!-- Item -->
-                <div class="d-flex no-gutters mb-2">
-                  <b class="text-muted col-md-5 col-6">Rarity</b>
-                  <span class="rarity"></span>
+                <div class="d-flex justify-content-between mb-2">
+                  <b class="text-muted">Talent</b>
+                  <span class="talent"></span>
                 </div>
   
                 <!-- Item -->
-                <div class="d-flex no-gutters">
-                  <b class="text-muted col-md-5 col-6">Price</b>
-                  <span>$<span class="price"></span></span>
-                </div>
-
-                <hr>
-                
-                <!-- Item -->
-                <div>
-                  <b class="text-muted">Description</b>
-                  <div class="px-4 cd-text-pre description"></div>
+                <div class="d-flex justify-content-between mb-2">
+                  <b class="text-muted">Rarity</b>
+                  <span class="rarity"></span>
                 </div>
 
               </div>
-            </div>
 
+              <!-- Item -->
+              <div class="col-md-6 p-3">
+                <b class="text-muted">Description</b>
+                <div class="px-4 cd-text-pre description"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr class="my-0">
+        
+        <!-- Similar Traits
+        <!-- ----------------------------------------------------------- -->
+        <div class="p-md-5 p-4">
+
+          <div id="similar-gallery">
+            <h4 class="text-primary mb-2">Similar Guides</h4>
+            <div class="row no-gutters m-n2 similar-list"></div>
+          </div>
+
+          <div style="display: none;">
+            <div class="col-md-3 col-6 p-2" id="similar-gallery-item">
+              <a class="profilelink" href="">
+                <img class="image img-fluid rounded" src="" >
+              </a>
+            </div>
           </div>
 
         </div>
