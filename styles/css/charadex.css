@@ -64,9 +64,29 @@ body {
   ================================================================ */
   --cd-body-font-family:                 'Montserrat', sans-serif;
   --cd-header-font-family:               'Comfortaa', sans-serif;
-
-
+  
   /* ============================================================= */
+  /* Rarities
+  ================================================================ */
+
+  --cd-rarity-common-bg:              #d58353;
+  --cd-rarity-common-txt:             #fcf4ed;
+
+  --cd-rarity-uncommon-bg:            #e0bb68;
+  --cd-rarity-uncommon-txt:            var(--cd-rarity-common-txt);
+  
+  --cd-rarity-rare-bg:               #97b34e;
+  --cd-rarity-rare-txt:                var(--cd-rarity-common-txt);
+
+  --cd-rarity-veryrare-bg:           #548b71;
+  --cd-rarity-veryrare-txt:            var(--cd-rarity-common-txt);
+
+  /* Legendary & Mythic */
+  --cd-rarity-legendary-bg:          #5a473e;
+  --cd-rarity-legendary-txt:           var(--cd-rarity-common-txt);
+
+
+ /* ============================================================= */
   /*
   /* Optional Styles
   /* These are just for extra easy styling
@@ -248,7 +268,7 @@ a:active {
   font-size: 2rem;
 }
 
-.navbar .navbar-brand:hover, 
+.navbar .navbar-brand:hover,
 .navbar .navbar-brand:focus {
   color: var(--cd-navbar-brand-color-hover) !important;
 }
@@ -257,8 +277,8 @@ a:active {
   color: var(--cd-navbar-link-color) !important;
 }
 
-.navbar .navbar-nav .nav-link:hover, 
-.navbar .navbar-nav .nav-link:focus{
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
   color: var(--cd-navbar-link-color-hover) !important;
 }
 
@@ -268,13 +288,13 @@ a:active {
 }
 
 .navbar .nav-link {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navbar .nav-link-icon {
-    font-size: .5rem;
-    margin-left: .25rem;
+  font-size: .5rem;
+  margin-left: .25rem;
 }
 
 
@@ -292,7 +312,7 @@ a:active {
 }
 
 .dropdown:hover .dropdown-menu,
-.dropdown-menu:hover{
+.dropdown-menu:hover {
   display: block !important
 }
 
@@ -306,10 +326,10 @@ a:active {
   transition: color .2s ease, background .2s ease;
 }
 
-.navbar .dropdown-item:hover, 
+.navbar .dropdown-item:hover,
 .dropdown-item:focus,
 .dropdown-item:active {
-  color: var(--cd-navbar-dropdown-link-color-hover)!important;
+  color: var(--cd-navbar-dropdown-link-color-hover) !important;
   background-color: var(--cd-navbar-dropdown-background-hover) !important;
 }
 
@@ -322,7 +342,7 @@ a:active {
 /* Footer
 /* ============================================================= */
 
-.footer{
+.footer {
   background-color: var(--cd-footer-background-color) !important;
   color: var(--cd-footer-text-color) !important;
 }
@@ -366,7 +386,7 @@ a:active {
 }
 
 /* Keeps users from accidentally highlighting */
-.page-link{
+.page-link {
   cursor: pointer;
   user-select: none;
 }
@@ -411,6 +431,16 @@ a:active {
   border-radius: calc(var(--cd-border-radius) - 1px) calc(var(--cd-border-radius) - 1px) 0 0 !important;
 }
 
+.card-footer {
+  background-color: var(--cd-card-header-background-color) !important;
+  border-top-color: var(--cd-card-border-color) !important;
+  border-top-width: var(--cd-card-border-width) !important;
+  border-top-style: var(--cd-card-border-style) !important;
+  font-family: var(--cd-card-header-font-family) !important;
+  border-radius: 0 0  calc(var(--cd-border-radius) - 1px) calc(var(--cd-border-radius) - 1px) !important;
+}
+
+
 
 /* ============================================================= */
 /* Buttons & Badges
@@ -431,45 +461,13 @@ a:active {
 .btn.btn-primary:active,
 a.badge.badge-primary:hover,
 a.badge.badge-primary:focus,
-a.badge.badge-primary:active  {
+a.badge.badge-primary:active {
   color: var(--cd-button-text-color-hover) !important;
   border-color: var(--cd-button-border-color-hover) !important;
   background-color: var(--cd-button-background-color-hover) !important;
   box-shadow: none !important;
 }
 
-/* ============================================================= */
-/* Hiding Element
-/* ============================================================= */
-
-.badge:has(.jobtwo:empty) {
-  display: none;
-  }
-  
-.coownership:has(.coowner:empty) {
-  display: none;
-  }
-  
-.coownership2:has(.coowner2:empty) {
-  display: none;
-  }
-
-.talentinfo:has(.talent:empty) {
-  display: none;
-  }
-
-.notesinfo:has(.notes:empty) {
-  display: none;
-  }
-  
-.parent1info:has(.parent1:empty) {
-  display: none;
-  }
-  
-.parent2info:has(.parent2:empty) {
-  display: none;
-  }
-  
 
 /* ============================================================= */
 /* Input
@@ -529,6 +527,10 @@ a.badge.badge-primary:active  {
   background-color: var(--cd-faded-background-color) !important;
 }
 
+.bg-reset {
+  background-color: var(--cd-content-background-color) !important;
+}
+
 .text-muted {
   color: var(--cd-faded-text-color) !important;
 }
@@ -548,10 +550,58 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
+.img-thumbnail {
+  border-radius:  var(--cd-border-radius) !important;
+  border-color: var(--cd-border-color) !important;
+}
+
 /* Fix any border radiuses that were messed from before */
-.rounded {border-radius: var(--cd-border-radius) !important}
-.rounded-circle {border-radius: 100%;}
-.rounded-0 {border-radius: 0 !important;}
+.rounded {
+  border-radius: var(--cd-border-radius) !important
+}
+
+.rounded-circle {
+  border-radius: 100%;
+}
+
+.rounded-0 {
+  border-radius: 0 !important;
+}
+
+
+/* ============================================================= */
+/* Loading
+/* ============================================================= */
+
+/* Fades container in on load so its not as jarring */
+.softload {
+  opacity: 0;
+}
+
+.softload.active {
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+/* Fades container in on load so its not as jarring */
+.hardload {
+  opacity: 0;
+}
+
+.hardload.active {
+  opacity: 1;
+  transition: opacity .1s ease;
+}
+
+/* Specifically for the body */
+#charadex-body {
+  display: none;
+}
+
+#charadex-body.active {
+  display: block;
+}
+
 
 /* ============================================================= */
 /* Chee's Tweaks
@@ -564,24 +614,16 @@ body {
 }
 
 #main-container {
-    min-height: calc(100vh - 105px);
-    padding: 1rem;
-    -ms-flex: 1 1 auto!important;
-    flex: 1 1 auto!important;
+  min-height: calc(100vh - 105px);
+  padding: 1rem;
+  -ml-flex: 1 1 auto !important;
+  flex: 1 1 auto !important;
 }
 
 @media (min-width: 768px) {
-    #main-container {
-        padding: 5rem 1.5rem;
-    }
-}
-
-/* Fades container in on load so its not as jarring */
-.softload {
-  opacity: 0;
-} .softload.active {
-  opacity: 1;
-  transition: opacity 2s ease;
+  #main-container {
+    padding: 5rem 1.5rem;
+  }
 }
 
 /* Remove ugly box shadow */
@@ -594,7 +636,7 @@ button:focus,
 
 /* Remove margin from last paragraphs */
 p:last-child {
-    margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /* Small container for more compact view */
@@ -602,85 +644,99 @@ p:last-child {
   max-width: 950px !important;
 }
 
+/* ============================================================= */
+/* Custom Classes
+/* ============================================================= */
+
 /* Prevents awkward load in stutter */
 #charadex-gallery .list .card-body {
   min-height: calc(200px + 2.5rem);
-} 
+}
 
 #charadex-gallery .list .card-body img {
   max-height: 200px;
 }
 
-.gallery-img {
-    max-height: 150px;
+.cd-gallery-card {
+  min-height: calc(175px + 2.5rem);
 }
 
-/* Combines search and its companion filter */
-#search-filter.form-control {
-  border-radius: var(--cd-border-radius) 0 0 var(--cd-border-radius) !important;
-  border-right: 0 !important;
-} 
-
-#search.filtered.form-control {
-  margin-left: -.5rem;
-  width: calc(100% + .5rem) !important;
-  border-radius: 0 var(--cd-border-radius) var(--cd-border-radius) 0 !important;
+.cd-gallery-card img {
+  max-height: 175px !important;
 }
 
-/* Loading Icon */
-#loading {
-  width: 5rem; 
-  height: 5rem;
-  position: absolute;
-  top: calc(50% - 2.5rem);
-  left: calc(50% - 2.5rem);
-  animation-duration: 2s;
-  opacity: .5;
-  border-color: var(--cd-body-text-color);
-  border-right-color: transparent !important;
+.cd-profile-image-container img{
+  max-height: 400px;
 }
 
-
-#log-table {
-    max-height: 200px;
-    overflow-y: auto;
+/* Traits */
+.cd-traits-scroll {
+  max-height: 200px;
+  overflow-y: auto;
 }
 
-/* ============================================================= */
-/* Custom Classes
-/* ============================================================= */
+/* Prompts */
+.cd-prompt-background {
+  background-position: center;
+  background-size: cover;
+  min-height: 150px;
+}
 
 /* Makes sure your text formatting is preserved from the sheet */
 /* Best for large areas like notes */
-.text-pre {
-    white-space: break-spaces;
+.cd-text-pre {
+  white-space: break-spaces;
 }
 
-.hero-title {
-    color: var(--cd-primary-text-color);
-    background-color: var(--cd-primary-color);
-    border-radius: var(--cd-border-radius);
-    font-family: var(--cd-header-font-family);
-    display: flex;
-    padding: 1.5rem;
-    min-height: 250px;
-    font-weight: 800;
-    font-size: 2.5rem;
+/* For the hero image in the index */
+.cd-hero-title {
+  color: var(--cd-primary-color);
+  background-color: var(--cd-faded-background-color);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--cd-border-radius);
+  font-family: var(--cd-header-font-family);
+  display: flex;
+  padding: 1.5rem;
+  padding-top: 40%;
+  font-weight: 800;
+  font-size: 2.5rem;
 }
 
 @media (min-width: 768px) {
-    .hero-title {
-        letter-spacing: 2px;
-        font-size: 5rem;
-    }
+  .cd-hero-title {
+    letter-spacing: 2px;
+    font-size: 5rem;
+  }
 }
 
 
+/* ============================================================= */
+/* Rarity
+/* ============================================================= */
 
+.badge-common {
+  background-color: var(--cd-rarity-common-bg);
+  color: var(--cd-rarity-common-txt);
+}
 
+.badge-uncommon {
+  background-color: var(--cd-rarity-uncommon-bg);
+  color: var(--cd-rarity-uncommon-txt);
+}
 
+.badge-rare {
+  background-color: var(--cd-rarity-rare-bg);
+  color: var(--cd-rarity-rare-txt);
+}
 
+.badge-veryrare {
+  background-color: var(--cd-rarity-veryrare-bg);
+  color: var(--cd-rarity-veryrare-txt);
+}
 
-
-
-
+.badge-legendary,
+.badge-mythic {
+  background-color: var(--cd-rarity-legendary-bg);
+  color: var(--cd-rarity-legendary-txt);
+}
