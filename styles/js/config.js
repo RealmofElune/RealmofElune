@@ -392,7 +392,7 @@ charadex.page.masterlist = {
       'Design Type': charadex.sheet.options.designTypes,
       'Status': charadex.sheet.options.statuses,
       'Rarity': charadex.sheet.options.rarity,
-      'Talent': charadex.sheet.options.talent,
+      'Talents': charadex.sheet.options.talent,
     }
   },
 

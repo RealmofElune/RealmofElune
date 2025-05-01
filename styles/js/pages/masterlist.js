@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Removes empty owner info
       for (let entry of arr) {
         if (!entry.owner) entry.owner = "Unsold Adopt";
+        entry.talents = entry.talent ? entry.talent.split(',').map(t => t.trim()) : [];
       }
 
     }, async (listData) => {
