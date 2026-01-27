@@ -9,5 +9,10 @@ import { charadex } from '../charadex.js';
 ======================================================================= */
 document.addEventListener("DOMContentLoaded", async () => {
   let dex = await charadex.initialize.page(null, charadex.page.items);
+
+        for (let entry of arr) {
+        if (!entry.allowances) entry.allowances = "None";
+        entry.talents = entry.talent ? entry.talent.split(',').map(t => t.trim()) : [];
+      }
   charadex.tools.loadPage('.softload', 500);
 });
