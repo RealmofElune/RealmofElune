@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Custom for Elune
       // Removes empty allowances info
       for (let entry of arr) {
-        if (!entry.allowances) entry.allowances = "Unsold Adopt";
+        if (!entry.allowances) entry.allowances = "None";
         entry.talents = entry.talent ? entry.talent.split(',').map(t => t.trim()) : [];
       }
   charadex.tools.loadPage('.softload', 500);
